@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерия</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(145deg, #e0e5ec, #ffffff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2d7b3d;
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 8px 8px 20px #c5c9d3, -8px -8px 20px #ffffff;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="gallery-container">
+    <div class="gallery-title">Галерия</div>
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <a href="/gallery/leshnik.jpg" target="_blank">
+                <img src="/gallery/leshnik.jpg" alt="Лешници">
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

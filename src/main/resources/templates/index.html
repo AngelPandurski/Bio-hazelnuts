@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Начало</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Segoe UI', sans-serif;
+			background: linear-gradient(145deg, #e0e5ec, #ffffff);
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.container-custom {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #ffffff;
+			border-radius: 20px;
+			box-shadow: 8px 8px 20px #c5c9d3, -8px -8px 20px #ffffff;
+			padding: 60px;
+			max-width: 1400px;
+			width: 95%;
+			min-height: 500px;
+		}
+
+		.left, .right {
+			flex: 1;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.right img {
+			max-height: 450px;
+			width: auto;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 1.2rem;
+			margin-bottom: 30px;
+		}
+
+		a.btn {
+			font-size: 1.1rem;
+			padding: 12px 28px;
+			margin: 10px;
+			border-radius: 30px;
+		}
+
+		/* Меню */
+		.dropdown {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1000;
+		}
+
+		/* Контакти секция */
+		#contactsSection {
+			display: none;
+			position: absolute;
+			top: 140px;
+			left: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			padding: 20px;
+			max-width: 280px;
+			font-size: 16px;
+			z-index: 999;
+		}
+
+		#contactsSection p {
+			margin: 10px 0;
+		}
+
+		#contactsSection .icon {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+
+<!-- Меню -->
+<div class="dropdown">
+	<button class="btn btn-secondary btn-lg fs-5 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+		Меню
+	</button>
+	<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		<li><a class="dropdown-item" href="/about">За нас</a></li>
+		<li><a class="dropdown-item" href="#" onclick="toggleSection('contactsSection'); return false;">Контакти</a></li>
+		<li><a class="dropdown-item" href="/gallery">Галерия</a></li>
+	</ul>
+</div>
+
+<!-- Контакти прозорче -->
+<div id="contactsSection">
+	<p><span class="icon">✉️</span>georgie7a@gmail.com</p>
+	<p><strong>Мол.:</strong> Огнян Георгиев</p>
+	<p><strong>Тел.:</strong> 0878 564 757</p>
+</div>
+
+<!-- Основно съдържание -->
+<div class="container-custom">
+	<div class="left">
+		<h1>Добре дошли!</h1>
+		<p>Моля, изберете една от опциите:</p>
+		<a href="/register" class="btn btn-success btn-custom mb-2">Регистрация</a><br>
+		<a href="/login" class="btn btn-primary btn-custom">Вход</a>
+	</div>
+	<div class="right">
+		<img src="/image.png" alt="Лого">
+	</div>
+</div>
+
+<!-- Скрипт за показване/скриване на контактите -->
+<script>
+	function toggleSection(sectionId) {
+		const section = document.getElementById(sectionId);
+		section.style.display = section.style.display === 'block' ? 'none' : 'block';
+	}
+
+	// Скриване при клик извън контактите
+	document.addEventListener('click', function(event) {
+		const contacts = document.getElementById('contactsSection');
+		const button = document.querySelector('.dropdown');
+
+		if (
+				contacts.style.display === 'block' &&
+				!contacts.contains(event.target) &&
+				!button.contains(event.target)
+		) {
+			contacts.style.display = 'none';
+		}
+	});
+</script>
+
+<!-- Bootstrap JS (dropdown needs it) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
