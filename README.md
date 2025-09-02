@@ -1,22 +1,21 @@
-# 🌰 Bio Leshnici
+🌰 Bio Leshnici
+This is a website built with Spring Boot and Thymeleaf, dedicated to presenting organic hazelnuts.
+The project is part of my Java Web training and includes core concepts of backend and frontend development.
 
-Това е уебсайт, изграден със **Spring Boot** и **Thymeleaf**, посветен на представянето на био лешници.  
-Проектът е част от моето обучение по Java Web и включва основни концепции за backend и frontend разработка.
+⚙️ Technologies
+	•	Java 17
+	•	Spring Boot
+	•	Spring MVC
+	•	Thymeleaf
+	•	HTML, CSS
+	•	Maven
 
-## ⚙️ Технологии
-- Java 17
-- Spring Boot
-- Spring MVC
-- Thymeleaf
-- HTML, CSS
-- Maven
+🚀 Features
+	•	Home page with information about organic hazelnuts
+	•	Static pages (information, contacts)
+	•	Basic structure for future expansion (e.g., product page, search, etc.)
 
-## 🚀 Функционалности
-- Начална страница с информация за био лешниците
-- Статични страници (информация, контакти)
-- Базова структура за бъдещо разширение (примерно продуктова страница, търсене и др.)
-
-## ▶️ Стартиране на проекта
-1. Клонирай репото:
+▶️ How to Run the Project
+Clone the repository:
    ```bash
    git clone https://github.com/AngelPandurski/bio-leshnici.git
