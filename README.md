@@ -1,4 +1,4 @@
-# 🌰 Bio Leshnici
+# 🌰 Bio-hazelnuts
 
 This is a website built with **Spring Boot** and **Thymeleaf**, dedicated to presenting organic hazelnuts.  
 The project is part of my Java Web training and includes core concepts of backend and frontend development.
